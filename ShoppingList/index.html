@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Signup App Sample</title>
+
+</head>
+
+<body>
+<div id="wrapper">
+    <header>
+        <h1>Shopping List App Sample</h1>
+        <p>You must customize this page for your needs.</p>
+    </header>
+
+    <h2>Add an item</h2>
+    <section id="addItem">
+			<form id="addForm" action="" method="post">
+				<label>Item: <input type="text" name="description" id="description"></label>
+				<label>Quantity: <input type="number" name="quantity" id="quantity"></label>
+				<input type="submit" value="Add Item">
+			</form>
+			<script src="js/insert_item.js"></script>
+    </section>
+
+    <section id="itemList">
+        <h2>Shopping List</h2>
+
+        <div id="listContainer"></div>
+        <script src="js/select_items.js"></script>
+    </section>
+
+</div><!--wrapper-->
+</body>
+</html>

@@ -28,26 +28,27 @@ var select_items = function () {
 			let container = document.getElementById('listContainer');
 			//Clean up the html
 			container.innerHTML = "";
-			
+
 			//Dump items in the DOM
 			for (let c in itemRaw) {
 				//c contains every person found, one at a time
 				console.log(c);
-				
+
 				//Container div for each person
-				let itemDIV = document.createElement('div');
-				itemDIV.className = "item";
-				
-				//Item: Description + Quantity
-				let descriptionP = document.createElement('p');
-				let quantityP = document.createElement('p');
-				descriptionP.innerHTML = itemRaw[c].description;
-				quantityP.innerHTML = itemRaw[c].quantity;
+				let itemP = document.createElement('p');
+				itemP.className = "item";
+
+				//Item: Quantity + Description
+				let quantitySPAN = document.createElement('span');
+				quantitySPAN.innerHTML = itemRaw[c].quantity;
+
+				let descriptionSPAN = document.createElement('span');
+				descriptionSPAN.innerHTML = itemRaw[c].description;
 
 				//Organize the structure and dump in html
-				itemDIV.appendChild(descriptionP);
-				itemDIV.appendChild(quantityP);
-				container.appendChild(itemDIV);
+				itemP.appendChild(quantitySPAN);
+				itemP.appendChild(descriptionSPAN);
+				container.appendChild(itemP);
 
 			}
         }

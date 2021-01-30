@@ -26,7 +26,7 @@ var insert_item = function() {
                 // Everything ok, get the response
                 console.log(xhr.responseText);
 
-                // Call a refresh of the list of names
+                // Call a refresh of the list of items
                 select_items();
             }
         };

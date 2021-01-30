@@ -24,17 +24,17 @@ var select_items = function () {
             itemRaw = JSON.parse(xhr.responseText);
 			console.log(itemRaw); // print response
 
-			//The HTML container for the list of names
+			//The HTML container for the list of items
 			let container = document.getElementById('listContainer');
 			//Clean up the html
 			container.innerHTML = "";
 
 			//Dump items in the DOM
 			for (let c in itemRaw) {
-				//c contains every person found, one at a time
+				//c contains every item found, one at a time
 				console.log(c);
 
-				//Container div for each person
+				//Container <p> for each item
 				let itemP = document.createElement('p');
 				itemP.className = "item";
 

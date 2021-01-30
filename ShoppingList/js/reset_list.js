@@ -1,5 +1,5 @@
-/* Handler to add an item to the list
-	Calls insert_item.php to dump item in DB
+/* Handler to reset the list of items
+	Calls reset_list.php to delete rows in table
 */
 
 var reset_list = function() {
@@ -10,9 +10,7 @@ var reset_list = function() {
     resetBttn.addEventListener('click', function (event) {
         event.preventDefault();
 
-        console.log("reset");
-
-        //This is the backend file inserting in the DB
+        //This is the backend file interacting with the DB
         const php = "php/reset_list.php";
 
         //This is what we send to the server for the PHP file
@@ -27,7 +25,7 @@ var reset_list = function() {
                 // Everything ok, get the response
                 console.log(xhr.responseText);
 
-                // Call a refresh of the list of names
+                // Call a refresh of the list of items
                 select_items();
             }
         };

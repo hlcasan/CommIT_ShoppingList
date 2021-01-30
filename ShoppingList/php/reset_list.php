@@ -9,9 +9,10 @@ error_reporting(E_ALL);
 
 if ($dbi) {
 
+    //The query to delete all items from the table
     $q = "DELETE FROM ShoppingList_Items";
 
-    //prepare statement, execute, store_result
+    //prepare statement, execute
     if ($Stmt = $dbi->prepare($q)) {
         $Stmt->execute();
     } else {
@@ -22,7 +23,7 @@ if ($dbi) {
     $Stmt->close();
     $dbi->close();
 }
-// Return to main page
+// Return to JS
 echo "OK: table reset";
 
 ?>
